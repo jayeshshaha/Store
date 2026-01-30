@@ -1,4 +1,10 @@
 <Solution>
+  <Folder Name="/client/">
+    <Project Path="store-ui/store-ui.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
   <Folder Name="/src/">
     <Project Path="Store.API/Store.API.csproj" />
     <Project Path="Store.Application/Store.Application.csproj" />
