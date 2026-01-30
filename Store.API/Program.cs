@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
+using Store.Application.Interfaces;
 using Store.Infrastructure.Data;
+using Store.Infrastructure.Repositories;
 
 namespace Store.API
 {
@@ -12,6 +14,8 @@ namespace Store.API
 
             builder.Services.AddDbContext<StoreDbContext>(options => 
             options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
+
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
             builder.Services.AddControllers();
 
