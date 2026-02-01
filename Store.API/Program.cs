@@ -17,9 +17,18 @@ namespace Store.API
 
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+            builder.Services.AddCors();
+
             builder.Services.AddControllers();
 
-            var app = builder.Build();  
+            var app = builder.Build();
+
+            app.UseCors(option =>
+            {
+                option.AllowAnyHeader()
+                .AllowAnyMethod()
+                .WithOrigins("https://localhost:3000");
+            });
 
             app.MapControllers();
 

@@ -11,7 +11,7 @@ namespace Store.API.Controllers
         public async Task<IActionResult> GetProducts()
         {
             var products = await productRepository.GetProductsAsync();
-            return Ok("");
+            return Ok(products);
         }
 
         [HttpGet("{id:int}")]
