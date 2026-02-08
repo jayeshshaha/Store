@@ -1,4 +1,7 @@
 import { useEffect } from "react"
+import Header from "./components/Header";
+import NavigationTabs from "./components/NavigationTabs";
+import Dashboard from "./features/dashboard/Dashboard";
 
 const App = () => {
   useEffect(() => {
@@ -14,7 +17,15 @@ const App = () => {
   }, [])
 
   return (
-    <div>App</div>
+    <div className="container  mx-auto">
+      <Header />
+      <NavigationTabs />
+      <section className="mt-5">
+        {/* <Dashboard /> */}
+      </section>
+    </div>
   )
 }
 export default App
+
+
