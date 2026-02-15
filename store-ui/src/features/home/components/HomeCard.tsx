@@ -1,14 +1,6 @@
-export default function DashboardCard() {
+export default function HomeCard() {
     return (
         <>
-            <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-            
-                .font-poppins {
-                    font-family: 'Poppins', sans-serif;
-                }
-            `}</style>
-
             <h1 className="text-3xl font-medium text-slate-800 text-center mb-2 font-poppins">New Arrivals</h1>
             <p className="text-slate-600 mb-10 font-poppins text-center">Explore the latest additions to our collection.</p>
             <section className="flex flex-wrap items-center justify-center gap-6">
